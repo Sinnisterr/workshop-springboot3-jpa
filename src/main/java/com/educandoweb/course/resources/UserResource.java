@@ -12,7 +12,7 @@ import com.educandoweb.course.entities.User;
 public class UserResource {
 
 	
-	@GetMapping									// Responde a requisicao get do http tem que colocar essa anotacao
+	@GetMapping								// Responde a requisicao get do http tem que colocar essa anotacao
 	public ResponseEntity<User> findAll() {   // metodo endpoint para acessar os usuarios teste
 	
 		User u = new User(1L, "Maria", "maria@gmail.com", "99999999", "12345" );
