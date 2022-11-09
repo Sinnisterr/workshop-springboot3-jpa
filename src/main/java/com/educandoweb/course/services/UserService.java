@@ -27,4 +27,8 @@ public class UserService { // buscar todos usuarios e operacao buscar usuario po
 		return obj.get();
 				
 	}
+	
+	public User insert(User obj) {
+		return repository.save(obj);
+	}
 }
