@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.StreamingHttpOutputMessage.Body;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.educandoweb.course.entities.User;
 import com.educandoweb.course.services.UserService;
 
-import jakarta.servlet.Servlet;
 
 @RestController
 @RequestMapping(value = "/users")
@@ -47,6 +46,12 @@ public class UserResource {
 		.buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).body(obj);
 
+	}
+	
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> delete(@PathVariable Long id) {
+		service.delete(id);
+		return ResponseEntity.noContent().build();
 	}
 	
 }
