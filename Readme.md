@@ -24,6 +24,8 @@ Este projeto implementa um sistema de e-commerce com funcionalidades essenciais 
 - **Spring Data JPA** - Persistência de dados
 - **Hibernate** - ORM (Object-Relational Mapping)
 - **H2 Database** - Banco de dados em memória (perfil de teste)
+- **Postgresql** - Banco de dados nuvem(Perfil Admin)
+- **Docker** - Para testes em nuvem.
 - **Maven** - Gerenciamento de dependências
 - **Jackson** - Serialização/Deserialização JSON
 
